@@ -1,0 +1,57 @@
+
+
+#t1{
+    background-color: aqua;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+}
+table,th,td{
+    border: 1px dotted;
+    border-collapse: collapse;
+}
+h2.p1{
+    border: 1px solid green;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 10%;
+    text-align: center;
+}
+
+.menu_nav{
+    display: inline-block;
+    background-color: blueviolet;
+    color: antiquewhite;
+    padding: 10px 30px;
+}
+nav{
+    display: block;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+.menu_nav:hover{
+    background-color: blue;
+}
+nav{
+    background-color: aquamarine;
+    padding: 20px;
+}
+
+p{
+    color: blue;
+}
+textarea{
+    overflow: hidden;
+    display: block;
+    
+
+}
+
+.l1{
+    position: relative;
+    top: 50px;
+}
+.l2{
+    position: relative;
+    left: 50px;
+}

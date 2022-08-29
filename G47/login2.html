@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="estilos_login_g47.css" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Crear un nuevo documento de html donde programen una ventana de login
+Esta debe tener dos campos de entrada una de texto para el usuario, otra de clave
+ademas debe tener dos etiquetas que indique cual entrada es, debe tener letra de
+tamano 25px, ademas tener dos botones uno de enviar y otro de regresar, el de regresar
+debe abrir pag1_g47.html, ademas en la barra de navegación de pag1_g47.html agregue un nuevo item
+que envie al login, el login debe tener un color de fondo y debe estar centrado, ademas
+cada elemento debe ocupar una linea-->
+            <label>Usuario</label>
+            <input id="inp01" type="text">
+            <label id="lbl01">Clave</label>
+            <input id="inp02" type="password">
+            <button onclick="document.getElementById('lbl01').innerHTML='cambio'">Enviar</button>
+            <button onclick="f_est()">cambiar</button>
+            <a href="pag1_G47.html" class="b1" id="reg"><button>Regresar</button></a>
+            <div class="fc1">
+                <div class="fc1i1">Flex item 1</div>
+                <div class="fc1i2">Flex item 2</div>
+                <div class="fc1i3">Flex item 3<br><br><br></div>
+
+            </div>
+            <script>
+                function funcion1(){
+                    document.getElementById('lbl01').style.backgroundColor='blue';
+                }
+            </script>
+            <!-- defina un nuevo flex container que tenga dentro cinco
+            flex items y que el tercer item tenga un 40% del total y los
+            demas items se reparten el resto de la pantalla. -->
+            <div class="fc2">
+                <div class="fc2i1">1</div>
+                <div class="fc2i2">2</div>
+                <div class="fc2i3">3</div>
+                <div class="fc2i4">4</div>
+                <div class="fc2i5">5</div>
+            </div>
+
+            <button onclick="f_encendido()">Encendido</button>
+            <button onclick="f_apagado()">apagado</button>
+            <img id="im1" src="https://cdn.pixabay.com/photo/2018/01/05/13/10/light-bulb-3062906__340.png" width="400" height="300">
+            <script>
+                let var1='https://assets.stickpng.com/thumbs/580b585b2edbce24c47b2793.png';
+                function f_apagado(){
+                    document.getElementById('im1').src='https://cdn.pixabay.com/photo/2018/01/05/13/10/light-bulb-3062906__340.png';
+                    console.log('Apagado');
+                }
+                function f_encendido(){
+                    document.getElementById('im1').src=var1;
+                    console.log('Encendido');
+                }
+            </script>
+            <p id="p1">Texto</p>
+            
+            
+            <script>
+                
+                let productos=["Granos","Carnes","Verduras","lacteos"];
+                let texto="";
+                var i;
+                for(i=0;i<productos.length;i++){
+                    texto+=productos[i]+"<br>";
+                }
+                document.getElementById('p1').innerHTML=texto;
+            </script>
+            
+            <p id="pp1">ppppp</p>
+            
+            <script>
+                class estudiante{
+                    constructor(nombre,codigo){
+                        this.nombre=nombre;
+                        this.codigo=codigo;
+                        
+                    }
+
+                    saludo(){
+                        
+                        document.getElementById('pp1').innerHTML='hola '+this.nombre;
+                        
+                    }
+                }
+                function f_est(){
+                    let n=document.getElementById('inp01').value;
+                    let c=document.getElementById('inp02').value
+                    alert(Date().getDay());
+        
+                    estudiante1=new estudiante(n,"AA1234");
+                    estudiante1.saludo();
+                    document.getElementById('reg').style.display='None';
+                }
+                
+            </script>
+    
+        </body>
+</html>

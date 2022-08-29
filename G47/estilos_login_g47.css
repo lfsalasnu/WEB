@@ -1,0 +1,71 @@
+:root{
+    --color_fondo:rgb(107,93,200);
+}
+
+body{
+    text-align: center;
+    background-color: var(--color_fondo);
+    font-size: 25px;
+}
+input{
+    display: block;
+    font-size: 25px;
+    text-align: center;
+    position: relative;
+    left: 50%;
+}
+label{
+    display: block;
+}
+button{
+    font-size: 25px;
+}
+
+.b1{
+    position: relative;
+    left: 50px;
+    top:10px
+}
+.fc1{
+    display: flex;
+    padding: 10px;
+    background-color: rgb(255, 153, 127);
+}
+.fc1i1{
+    background-color: blue;
+    flex: 2 1 auto;
+    align-content: center;
+}
+.fc1i2{
+    background-color: blueviolet;
+    flex: 1 1 auto;
+}
+.fc1i3{
+    background-color: brown;
+    flex: 1 1 auto;
+}
+.fc2{
+    display: flex;
+    padding: 20px;
+    background-color: black;
+}
+.fc2i1{
+    background-color: rgb(0, 255, 55);
+    flex:1 1 15%;
+}
+.fc2i2{
+    background-color: rgb(17, 0, 255);
+    flex:1 1 15%;
+}
+.fc2i3{
+    background-color: rgb(174, 0, 255);
+    flex:1 1 15%;
+}
+.fc2i4{
+    background-color: rgb(255, 0, 128);
+    flex:1 1 15%;
+}
+.fc2i5{
+    background-color: rgb(255, 208, 0);
+    flex:1 1 40%;
+}
