@@ -1,65 +1,64 @@
 .calculadora{
+    background: rgb(42, 42, 51);
     width: 480px;
     height: auto;
     padding: 10px 0;
     margin: auto;
-    background: rgb(21, 21, 23);
     border: 1px solid black;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
-    border-radius: 13px;
     overflow: hidden;
 }
 .pantalla{
-    width: 400px;
-    height: 93px;
+    width: 420px;
+    height: 90px;
     margin: 12px auto 30px;
-    padding: 15px 20px;
+    padding: 10px;
     border: 1px solid black;
-    color: antiquewhite;
     text-align: right;
+    color: antiquewhite;
     font-size: 3em;
     border-radius: 13px;
-    overflow: hidden;
 }
 
 .botones{
     padding: 0px;
-    width: 424px;
+    width: 420px;
     margin: auto;
 }
 
 .botones a{
     margin-right: 10px;
     display: inline;
-    margin-bottom: 10px;
     float: left;
+    margin-bottom: 10px;
 }
 
 .botones button{
     display: inline-block;
     width: 95px;
     height: 68px;
-    padding: 18px 0 12px;
-    font-size: 1.6em;
-    font-family: 'Courier New', Courier, monospace;
-    background-color: rgb(63, 63, 73);
+    padding: 18px 0px 12px;
     color: antiquewhite;
+    background-color: rgb(67, 67, 85);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.6em;
 }
 
 .botones button:active{
-    background: black !important;
+    background-color: black !important;
 }
 
-.vertical{
-    height: 151px !important;
-    background-color: rgb(4, 142, 193) !important;
+#vertical{
+    background-color: rgb(9, 134, 213);
+    height: 151px;
 }
 
-.horizontal{
-    width: 200px !important;
+#horizontal{
+    width: 200px;
 }
-#subir{
+
+.subir{
     position: relative;
     top: -78px;
 }

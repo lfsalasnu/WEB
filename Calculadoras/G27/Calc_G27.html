@@ -1,37 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <title></title>
+        <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1176/1176238.png">
+        <title>Calculadora</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="Calc_G27.css" rel="stylesheet">
     </head>
     <body>
-        <div class="calculadora" id="calculadora">
-            <div class="pantalla" id="pantalla">0</div>
-            <div class="botones" id="botones">
-                <a  href="#" data-key="clear"><button>C</button></a>
-                <a  href="#" data-key="/"><button>/</button></a>
-                <a  href="#" data-key="*"><button>*</button></a>
-                <a  href="#" data-key="-"><button>-</button></a>
-                <a  href="#" data-key="7"><button>7</button></a>
-                <a  href="#" data-key="8"><button>8</button></a>
-                <a  href="#" data-key="9"><button>9</button></a>
-                <a  href="#" data-key="+"><button>+</button></a>
-                <a  href="#" data-key="4"><button>4</button></a>
-                <a  href="#" data-key="5"><button>5</button></a>
-                <a  href="#" data-key="6"><button>6</button></a>
-                <a  href="#" data-key="+"><button>+</button></a>
-                <a  href="#" data-key="3"><button>3</button></a>
-                <a  href="#" data-key="2"><button>2</button></a>
-                <a  href="#" data-key="1"><button>1</button></a>
-                <a  href="#" data-key="="><button class="vertical">=</button></a>
-                <a  href="#" data-key="0"><button class="horizontal" id="subir">0</button></a>
-                <a  href="#" data-key="punto"><button id="subir">.</button></a>
+        <div class="calculadora">
+            <div class="pantalla" id="pantalla"></div>
+            <div class="botones">
+                <a href="#" data-key="clear"><button onclick="funcion_borrar()">C</button></a>
+                <a href="#" data-key="entre"><button onclick="funcion_entre()">/</button></a>
+                <a href="#" data-key="por"><button onclick="funcion_por()">*</button></a>
+                <a href="#" data-key="menos"><button onclick="funcion_menos()">-</button></a>
+                <a href="#" data-key="7"><button onclick="funcion_7()">7</button></a>
+                <a href="#" data-key="8"><button onclick="funcion_8()">8</button></a>
+                <a href="#" data-key="9"><button onclick="funcion_9()">9</button></a>
+                <a href="#" data-key="+"><button onclick="funcion_mas()">+</button></a>
+                <a href="#" data-key="4"><button onclick="funcion_4()">4</button></a>
+                <a href="#" data-key="5"><button onclick="funcion_5()">5</button></a>
+                <a href="#" data-key="6"><button onclick="funcion_6()">6</button></a>
+                <a href="#" data-key="+"><button onclick="funcion_mas()">+</button></a>
+                <a href="#" data-key="1"><button onclick="funcion_1()">1</button></a>
+                <a href="#" data-key="2"><button onclick="funcion_2()">2</button></a>
+                <a href="#" data-key="3"><button onclick="funcion_3()">3</button></a>
+                <a href="#" data-key="="><button id="vertical">=</button></a>
+                <a href="#" data-key="0"><button class="subir" id="horizontal" onclick="funcion_0()">0</button></a>
+                <a href="#" data-key="."><button class="subir" onclick="funcion_punto()">.</button></a>
 
-                
             </div>
 
         </div>
+        <script src="Calc_G27.js"></script>
     </body>
 </html>
