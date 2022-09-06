@@ -1,5 +1,5 @@
 let pantalla=document.getElementById('pantalla');
-
+//implementar las funciones de los signos
 function funcion_0(){
     pantalla.innerHTML+='0';  
 }
@@ -30,3 +30,32 @@ function funcion_8(){
 function funcion_9(){
     pantalla.innerHTML+='9';  
 }
+function funcion_mas(){
+    pantalla.innerHTML+='+';  
+}
+function funcion_menos(){
+    pantalla.innerHTML+='-';  
+}
+function funcion_por(){
+    pantalla.innerHTML+='*';  
+}
+function funcion_entre(){
+    pantalla.innerHTML+='/';  
+}
+function funcion_punto(){
+    pantalla.innerHTML+='.';  
+}
+function funcion_borrar(){
+    pantalla.innerHTML='';  
+}
+
+function funcion_igual(){
+    pantalla.innerHTML=eval(pantalla.innerHTML);
+    if(pantalla.innerHTML.length>8){
+        pantalla.innerHTML=eval(pantalla.innerHTML).toFixed(8);
+    }
+     
+}
+
+// como usar un for con un data- para evitar definir tantas funciones
+// y onclicks

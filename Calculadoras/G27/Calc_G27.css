@@ -19,6 +19,7 @@
     color: antiquewhite;
     font-size: 3em;
     border-radius: 13px;
+    overflow: hidden;
 }
 
 .botones{
