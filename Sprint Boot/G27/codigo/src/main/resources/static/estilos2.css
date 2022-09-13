@@ -1,0 +1,21 @@
+.nav-link{
+    color: antiquewhite !important;
+}
+
+.navbar-brand{
+    color: aliceblue;
+}
+
+h1{
+    text-align: center;
+}
+
+.btn{
+    margin: 10px !important;
+}
+
+/* .carousel-item{
+    width: 1000px !important;
+    height: auto !important;
+    content: center !important;
+} */
