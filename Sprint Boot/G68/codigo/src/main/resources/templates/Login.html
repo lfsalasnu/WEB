@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <link href="estilo2.css" rel="stylesheet">
+    </head>
+    <body class="container-fluid center">
+        <nav class="navbar navbar-expand-lg bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="Index">Inicio</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="Animales">Animales en Colombia</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Parques">Parques Naturales en Colombia</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Páginas
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="https://www.parquesnacionales.gov.co/portal/es/">Parques naturales</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="https://acortar.link/E8m4dh">Fauna Colombiana</a></li>
+                      <li><a class="dropdown-item" href="https://acortar.link/mr73Wx">Flora Colombiana</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a href="Login" class="nav-link">Login</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+
+          <h1>Inicio de Sesión</h1>
+
+          <main class="form-signin w-50 m-auto">
+            <form>
+              <img class="mb-4" src="https://www.certificadomisionticutp.com/assets/img/logo2.png" alt="">
+              <h1 class="h3 mb-3 fw-normal">Inicio de Sesión</h1>
+          
+              <div class="form-floating">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@ejemplo.com">
+                <label for="floatingInput">Correo</label>
+              </div>
+              <div class="form-floating">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Clave">
+                <label for="floatingPassword">Clave</label>
+              </div>
+          
+              <div class="checkbox mb-3">
+                <label>
+                  <input type="checkbox" value="remember-me"> Recuerdame
+                </label>
+              </div>
+              <button class="w-100 btn btn-lg btn-primary" type="submit">Iniciar Sesión</button>
+              <p class="mt-5 mb-3 text-muted">&copy; 2022</p>
+            </form>
+          </main>
+
+
+
+          <footer class="pt-4 my-md-5 pt-md-5 border-top">
+            <div class="row">
+              <div class="col-12 col-md">
+                <img class="mb-2" src="https://www.certificadomisionticutp.com/assets/img/logo2.png" alt="" width="200" height="auto">
+                <small class="d-block mb-3 text-muted">&copy; 2020-2022</small>
+              </div>
+              <div class="col-6 col-md">
+        
+                <!-- modificar un menú del pie de pagina agregando 4
+                zonas en colombia donde se encuentren parques naturales 
+                y que cuando de clic sobre el nombre de uno de ellos me lleve
+                a la pagina web de este-->
+        
+                <h5>Parque Nacionales</h5>
+                <ul class="list-unstyled text-small">
+                  <li class="mb-1"><a class="link-secondary text-decoration-none" href="https://bahiamalaga.org/index.php">Bahía Malaga</a></li>
+                  <li class="mb-1"><a class="link-secondary text-decoration-none" href="https://www.parquesnacionales.gov.co/portal/es/ecoturismo/parques/region-andina/santuario-de-flora-y-fauna-galeras/">Santuario de Flora y fauna Galeras</a></li>
+                  <li class="mb-1"><a class="link-secondary text-decoration-none" href="https://www.parquesnacionales.gov.co/portal/es/ecoturismo/parques/region-caribe/parque-nacional-natural-sierra-nevada-de-santa-marta-2/">Parque Sierra Nevada de Santa Marta</a></li>
+                  <li class="mb-1"><a class="link-secondary text-decoration-none" href="https://www.parquesnacionales.gov.co/portal/es/ecoturismo/parques/region-caribe/parque-nacional-natural-macuira/">Macuira</a></li>
+                  <li class="mb-1"><a class="link-secondary text-decoration-none" href="https://www.parquesnacionales.gov.co/portal/es/parques-nacionales/parque-nacional-natural-cordillera-de-los-picachos-2/">Los Picachos</a></li>
+                  <li class="mb-1"><a class="link-secondary text-decoration-none" href="https://www.parquesnacionales.gov.co/portal/es/ecoturismo/parques/region-caribe/parque-nacional-natural-tayrona/">Tayrona</a></li>
+                </ul>
+              </div>
+              <div class="col-6 col-md">
+                <h5>Resources</h5>
+                <ul class="list-unstyled text-small">
+                  <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Resource</a></li>
+                  <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Resource name</a></li>
+                  <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Another resource</a></li>
+                  <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Final resource</a></li>
+                </ul>
+              </div>
+              <div class="col-6 col-md">
+                <h5>About</h5>
+                <ul class="list-unstyled text-small">
+                  <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Team</a></li>
+                  <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Locations</a></li>
+                  <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Privacy</a></li>
+                  <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Terms</a></li>
+                </ul>
+              </div>
+            </div>
+          </footer>
+        <script src="bootstrap.bundle.min.js"></script>
+    </body>
+</html>
