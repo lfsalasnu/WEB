@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es" xmlns="www.thymeleaf.org">
+
+<head>
+  <title>Peliculas</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+
+<body class="container">
+
+  <nav class="navbar navbar-expand-lg bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="index">Inicio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active text-white" aria-current="page" href="Nuevo">Nuevo</a>
+          </li>
+          <li class="nav-item text-white">
+            <a class="nav-link text-white" href="#">Link</a>
+          </li>
+
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <br>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
+        <h1 class="text-center">Registro de Peliculas</h1>
+        <div class="card-body">
+          <form th:action="@{/guardar}" th:object="${peliculas}" method="post"></object>
+            <div class="form-group">
+              <label>Nombre:</label>
+              <input type="text" name="Nombre" th:field="*{Nombre}" class="form-control" placeholder="Digite el nombre de la pelicula">
+            </div>
+            <!-- <div class="form-group">
+              <label>Pais:</label>
+              <input type="text" name="Pais" th:field="*{Pais}" class="form-control" placeholder="Digite el pais de origen">
+            </div>
+            <div class="form-group">
+              <label>Recaudo:</label>
+              <input type="text" name="Recaudo" th:field="*{Recaudo}" class="form-control" placeholder="Digite el recuado de la pelicula">
+            </div>
+            <div class="form-group">
+              <label>Año:</label>
+              <input type="text" name="An" th:field="*{An}" class="form-control" placeholder="Digite el Año de estreno">
+            </div> -->
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
