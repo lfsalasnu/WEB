@@ -9,6 +9,7 @@ import javax.persistence.*;
 public class Peliculas implements Serializable{
 
     @Id
+    //@GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id")
     private int id;
 
@@ -29,7 +30,7 @@ public class Peliculas implements Serializable{
 
 
 
-    
+
     public int getId() {
         return id;
     }
