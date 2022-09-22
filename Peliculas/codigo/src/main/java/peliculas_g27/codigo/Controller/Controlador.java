@@ -14,13 +14,18 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import peliculas_g27.codigo.Model.Peliculas;
+import peliculas_g27.codigo.Model.Usuarios;
 import peliculas_g27.codigo.Repositories.Peliculas_repo;
+import peliculas_g27.codigo.Repositories.Usuarios_repo;
 
 @Controller
 public class Controlador {
     
     @Autowired
     private Peliculas_repo prp;
+
+    @Autowired
+    private Usuarios_repo urp;
 
     @GetMapping("/index")
     public String index(Model modelo){
@@ -49,5 +54,30 @@ public class Controlador {
 
         return modelo;
     }
+
+    @RequestMapping("/eliminar/{id}")
+    public String eliminar(@PathVariable(name="id")int id){
+        prp.deleteById(id);
+        return "redirect:/index";
+    }
+
+    @GetMapping("/login")
+    public String login(){
+        return "login";
+    }
+
+    // @RequestMapping(value="/inicio_sesion",method = RequestMethod.POST)
+    // public String inicio_sesion(@ModelAttribute("usuario") Usuarios usuarios){
+    //     String id= usuarios.getId();
+    //     String idg=urp.getReferenceById(id).getId();
+    //     if (id.equals(idg)){
+    //         return "inicio_sesion";
+    //     }
+    //     else{
+    //         return "error";
+    //     }
+        
+    // }
+    
     
 }
