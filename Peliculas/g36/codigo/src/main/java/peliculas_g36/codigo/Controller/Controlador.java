@@ -13,13 +13,19 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import peliculas_g36.codigo.Model.Peliculas;
+import peliculas_g36.codigo.Model.Usuario;
 import peliculas_g36.codigo.Repository.Peliculas_repo;
+import peliculas_g36.codigo.Repository.Usuario_repo;
 
 @Controller
 public class Controlador {
     
     @Autowired
     private Peliculas_repo prp;
+
+    @Autowired
+    private Usuario_repo urp;
+
 
     @GetMapping("/index")
     public String inicio(Model modelo){
@@ -56,4 +62,49 @@ public class Controlador {
         return "redirect:/index";
 
     }
+
+    @GetMapping("/login")
+    public String login(){
+        return "login";
+    }
+
+    @RequestMapping("/inicio_sesion")
+    public ModelAndView inicio_sesion(@ModelAttribute("usuarios") Usuario usuario){
+        String id=usuario.getUsuario();
+        ModelAndView modelo;
+		Usuario idg=urp.getReferenceById(id);
+		
+        if( id==idg.getUsuario()){
+            String cont1=usuario.getCont();
+			if(cont1.equals(idg.getCont())){
+                modelo=new ModelAndView("vista_usuario");
+                modelo.addObject("usr", idg);
+                return modelo;
+                
+                //return "vista_usuario";
+            }
+            else{
+                modelo=new ModelAndView("error");
+                modelo.addObject("usr", usuario);
+                return modelo;
+                //return "error";
+            }
+		}
+		else{
+			modelo=new ModelAndView("error");
+            modelo.addObject("usr", usuario);
+            return modelo;
+            //return "error";
+		}
+
+        //return modelo;
+    }
+
+    @RequestMapping(value="/guardar_usuario",method = RequestMethod.POST)
+    public String guardar_usuario(@ModelAttribute("usuario") Usuario usuario){
+        urp.save(usuario);
+        return "redirect:/index";
+    }
+
+    
 }

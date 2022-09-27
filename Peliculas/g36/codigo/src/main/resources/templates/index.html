@@ -29,8 +29,8 @@
                     <li class="nav-item">
                         <a class="nav-link text-white" href="login">Login</a>
                     </li>
-                    
-                    
+
+
                 </ul>
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
@@ -67,7 +67,34 @@
                 <td>
                     <a class="btn btn-primary" th:href="@{'/'+${peliculas.id}}">Editar</a>
                     &nbsp;
-                    <a class="btn btn-danger" th:href="@{'/eliminar/'+${peliculas.id}}">Borrar</a>
+                    <!-- <a class="btn btn-danger" th:href="@{'/eliminar/'+${peliculas.id}}">Borrar</a> -->
+
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" th:data-bs-target="'#dialogo'+${peliculas.id}">
+                        Eliminar
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" th:id="'dialogo'+${peliculas.id}" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Eliminar</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Desea Eliminar el registro?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Cancelar</button>
+                                    <a type="button" class="btn btn-danger" th:href="@{'/eliminar/'+${peliculas.id}}">Eliminar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </td>
             </tr>
 
