@@ -66,12 +66,12 @@
                     &nbsp;
                     <!-- Button trigger modal -->
                     <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-                        data-bs-target="#staticBackdrop" >
+                        th:data-bs-target="'#dialogo'+${peliculas.id}" >
                         Eliminar
                     </button>
                     <!-- <a class="btn btn-danger" th:href="@{'/eliminar/'+${peliculas.id}}">Borrar</a> -->
                     <!-- Modal -->
-                    <div class="modal fade" id="staticBackdrod" data-bs-backdrop="static" data-bs-keyboard="false"
+                    <div class="modal fade" th:id="'dialogo'+${peliculas.id}" data-bs-backdrop="static" data-bs-keyboard="false"
                         tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
@@ -86,7 +86,7 @@
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary"
                                         data-bs-dismiss="modal">Cerrar</button>
-                                        <a class="btn btn-danger" th:text="${peliculas.id}"></a>
+                                        <a th:href="@{'/eliminar/'+${peliculas.id}}" class="btn btn-danger">Eliminar</a>
                                     
                                         <!-- th:href="@{'/eliminar/'+${peliculas.id}}" <button type="button" class="btn btn-primary" -->
                                         <!-- th:action="@{'/eliminar/'+${peliculas.id}}">Eliminar</button> -->

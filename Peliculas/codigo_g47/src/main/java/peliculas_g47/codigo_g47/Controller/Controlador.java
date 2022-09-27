@@ -37,6 +37,7 @@ public class Controlador {
     @RequestMapping(value="/guardar", method = RequestMethod.POST)
     public String guardar_pelicula(@ModelAttribute("peliculas") Peliculas peliculas){
         prp.save(peliculas);
+
         return "redirect:/index";
     }
 
@@ -85,5 +86,9 @@ public class Controlador {
     //     //return "mi_cuenta{usr}";
 
     // }
+
     
+    //crear un metodo que con getmapping para abrir la creación de
+    //un nuevo usuario y ejecuar el codigo para guardar en la base
+    //de datos
 }

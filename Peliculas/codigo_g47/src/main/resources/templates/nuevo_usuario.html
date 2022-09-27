@@ -46,32 +46,29 @@
     <div class="container">
         <div class="row">
             <div class=" col-lg-6 col-md-6 col-md-6 card justify-content-center container">
-                <h1 class="text-center">Registro de pelicula</h1>
+                <h1 class="text-center">Registro Usuario</h1>
                 <div class="card-body">
-                    <form th:action="@{/guardar}" th:object="${peliculas}" method="post">
+                    <form th:action="@{/guardar_usuario}" th:object="${usuario}" method="post">
                         <div class="form-group">
                             <label>Nombre: </label>
-                            <input type="text" name="nombre" field="*{nombre}" placeholder="Nombre de la pelicula" class="form-control" required>
+                            <input type="text" name="nombre" field="*{nombre}" placeholder="Nombre" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label>país: </label>
-                            <input type="text" name="pais" field="*{pais}" placeholder="País de origen" class="form-control" required>
+                            <label>apellido: </label>
+                            <input type="text" name="apellidos" field="*{apellidos}" placeholder="Apellido" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label>Año: </label>
-                            <input type="number" name="an" field="*{an}" placeholder="Año de estreno" class="form-control" required>
+                            <label>Correo </label>
+                            <input type="email" name="usuario" field="*{usuario}" placeholder="Correo" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label>Recaudo: </label>
-                            <input type="number" name="recaudo" field="*{recaudo}" placeholder="Recaudo en taquilla (mill USD)" class="form-control" required>
+                            <label>Contraseña: </label>
+                            <input type="password" name="cont" field="*{cont}" placeholder="Contraseña" class="form-control" required>
                         </div>
-                        <div class="form-group">
-                            <label>Id: </label>
-                            <input type="number" name="id" field="*{id}" placeholder="Id Pelicula" class="form-control" required>
-                        </div>
+                        
                         <br>
                         <div class="box-footer">
-                            <button class="btn btn-success">Guardar</button>
+                            <button class="btn btn-success">Registrarme</button>
                         </div>
                         
                 </div>
